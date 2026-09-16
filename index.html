@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f47721">
+  <meta name="description" content="BrewTon Cafe — 100% Pure Veg cafe in Hisar">
+  <title>BrewTon Cafe — Pure Veg. Full Flavour.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=10">
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <a href="#home" class="brand">
+      <span class="brand-mark">B</span>
+      <span><b>BrewTon</b><small>CAFE</small></span>
+    </a>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#story">Our Story</a>
+      <a href="#contact">Visit Us</a>
+    </nav>
+    <button class="cart-button" id="cartButton" aria-label="Open cart">
+      <span>Cart</span><i id="cartCount">0</i>
+    </button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">100% PURE VEG · HISAR</p>
+        <h1>Made for<br><em>slow sips</em><br>& big bites.</h1>
+        <p class="hero-text">A warm corner for bold pizzas, silky shakes and coffee that keeps the conversation going.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#menu">Explore the menu <span>↗</span></a>
+          <a class="text-btn" href="tel:9468068043">Call us</a>
+        </div>
+        <div class="hero-note"><span>✦</span> Wheat Base Pizza · Crafted fresh, always</div>
+      </div>
+      <div class="hero-art">
+        <div class="sun"></div>
+        <div class="ring ring-one"></div><div class="ring ring-two"></div>
+        <div class="food-orb">
+          <div class="pizza-visual"><span>●</span><span>●</span><span>●</span><span>●</span><i></i></div>
+        </div>
+        <div class="float-card card-top"><small>Today's mood</small><strong>Cheesy<br>and easy.</strong></div>
+        <div class="float-card card-bottom"><b>OPEN DAILY</b><span>10:00 AM — 10:00 PM</span></div>
+        <div class="sparkle s1">✦</div><div class="sparkle s2">✧</div>
+      </div>
+    </section>
+
+    <section class="marquee"><div>PURE VEG <span>✦</span> FRESHLY MADE <span>✦</span> WHEAT BASE PIZZA <span>✦</span> GOOD MOOD FOOD <span>✦</span> PURE VEG <span>✦</span></div></section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE GOOD STUFF</p><h2>Pick your<br><em>pleasure.</em></h2></div>
+        <div class="menu-tools">
+          <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search the menu..." aria-label="Search menu"></label>
+        </div>
+      </div>
+      <div class="chips" id="chips"></div>
+      <div id="menuContent"></div>
+    </section>
+
+    <section class="story" id="story">
+      <div class="story-shape"></div>
+      <div class="story-copy"><p class="eyebrow">WHY BREWTON</p><h2>More than<br>a <em>cafe.</em></h2><p>We believe the best memories begin around a table. So we bring together fresh ingredients, generous flavours and a space that feels like your favourite playlist.</p><div class="signature">BrewTon <span>♥</span></div></div>
+      <div class="story-facts"><div><b>01</b><strong>Pure Veg</strong><span>Nothing but good stuff.</span></div><div><b>02</b><strong>Wheat Base</strong><span>Our signature pizza touch.</span></div><div><b>03</b><strong>Made Fresh</strong><span>Order-by-order love.</span></div></div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div><p class="eyebrow">COME SAY HI</p><h2>Your table<br>is <em>waiting.</em></h2></div>
+      <div class="contact-details"><p>Gali Number 1, HTM Colony,<br>Azad Nagar, Hisar, Haryana 125007</p><p><b>10:00 AM — 10:00 PM</b><br>Every day</p><div><a href="tel:9468068043">9468068043</a><a href="https://wa.me/918950386412" target="_blank">WhatsApp us ↗</a></div></div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#home"><span class="brand-mark">B</span><span><b>BrewTon</b><small>CAFE</small></span></a><span>© 2024 BrewTon Cafe · Hisar</span><span>Made with good vibes ✦</span></footer>
+
+  <div class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="drawer-head"><div><p class="eyebrow">YOUR ORDER</p><h3>Good choices.</h3></div><button class="close" id="closeCart">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer"><div><span>Total</span><strong id="cartTotal">₹0</strong></div><button class="whatsapp-btn" id="checkout">Order on WhatsApp <span>↗</span></button></div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="modal-wrap" id="modalWrap">
+    <div class="modal">
+      <button class="close" id="closeModal">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,622 @@
+{
+  "cafe": {
+    "name": "BrewTon Cafe",
+    "phone": "9468068043",
+    "whatsapp": "8950386412",
+    "timing": "10:00 AM - 10:00 PM",
+    "address": "Gali Number 1, HTM Colony, Azad Nagar, Hisar, Haryana 125007"
+  },
+  "menu": [
+    {
+      "category": "Pizza Mania",
+      "items": [
+        {
+          "name": "Veg Single",
+          "small": 70,
+          "medium": 120,
+          "options": [
+            "Onion",
+            "Capsicum",
+            "Sweet Corn",
+            "Tomato"
+          ],
+          "image": "images/veg-single.webp"
+        },
+        {
+          "name": "Veg Double",
+          "small": 100,
+          "medium": 190,
+          "options": [
+            "Onion",
+            "Capsicum",
+            "Sweet Corn",
+            "Tomato"
+          ],
+          "image": "images/veg-double.webp"
+        }
+      ]
+    },
+    {
+      "category": "Farm Fresh",
+      "items": [
+        {
+          "name": "Veggie Fresh",
+          "small": 150,
+          "medium": 270,
+          "ingredients": [
+            "Onion",
+            "Capsicum",
+            "Sweet Corn"
+          ],
+          "image": "images/veggie-fresh.webp"
+        },
+        {
+          "name": "Exotic Veg Pizza",
+          "small": 150,
+          "medium": 270,
+          "badge": "Best Seller",
+          "ingredients": [
+            "Capsicum",
+            "Baby Corn",
+            "Red Paprika",
+            "Jalapeno"
+          ],
+          "image": "images/exotic-veg-pizza.webp"
+        },
+        {
+          "name": "Veggie Paradise",
+          "small": 150,
+          "medium": 270,
+          "ingredients": [
+            "Golden Olive",
+            "Black Olive",
+            "Capsicum",
+            "Red Paprika"
+          ],
+          "image": "images/veggie-paradise.webp"
+        }
+      ]
+    },
+    {
+      "category": "Kids Special",
+      "items": [
+        {
+          "name": "Lovely Cheese Margherita",
+          "small": 120,
+          "medium": 220,
+          "ingredients": [
+            "Mozzarella Cheese"
+          ],
+          "image": "images/lovely-cheese-margherita.webp"
+        },
+        {
+          "name": "Lovely Onion Cheese",
+          "small": 120,
+          "medium": 220,
+          "ingredients": [
+            "Onion",
+            "Mozzarella Cheese"
+          ],
+          "image": "images/lovely-onion-cheese.webp"
+        },
+        {
+          "name": "Lovely Sweet Corn Cheese",
+          "small": 120,
+          "medium": 220,
+          "ingredients": [
+            "Sweet Corn",
+            "Mozzarella Cheese"
+          ],
+          "image": "images/lovely-sweet-corn-cheese.webp"
+        },
+        {
+          "name": "Lovely Capsicum Cheese",
+          "small": 120,
+          "medium": 220,
+          "ingredients": [
+            "Capsicum",
+            "Mozzarella Cheese"
+          ],
+          "image": "images/lovely-capsicum-cheese.webp"
+        },
+        {
+          "name": "Onion + Paneer",
+          "small": 120,
+          "medium": 220,
+          "badge": "Best Seller",
+          "image": "images/onion-plus-paneer.webp"
+        }
+      ]
+    },
+    {
+      "category": "Paneer Lover",
+      "items": [
+        {
+          "name": "Paneer Makhni",
+          "small": 180,
+          "medium": 320,
+          "ingredients": [
+            "Paneer",
+            "Sweet Corn",
+            "Onion",
+            "Capsicum",
+            "Makhni Sauce"
+          ],
+          "image": "images/paneer-makhni.webp"
+        },
+        {
+          "name": "Paneer Tandoori",
+          "small": 180,
+          "medium": 320,
+          "ingredients": [
+            "Red Paprika",
+            "Corn",
+            "Paneer",
+            "Tandoori Sauce"
+          ],
+          "image": "images/paneer-tandoori.webp"
+        },
+        {
+          "name": "Farm House",
+          "small": 180,
+          "medium": 320,
+          "badge": "Best Seller",
+          "ingredients": [
+            "Onion",
+            "Capsicum",
+            "Tomato",
+            "Mushroom"
+          ],
+          "image": "images/farm-house.webp"
+        }
+      ]
+    },
+    {
+      "category": "Brewton Special",
+      "items": [
+        {
+          "name": "Family Pizza",
+          "small": 220,
+          "medium": 380,
+          "ingredients": [
+            "Onion",
+            "Capsicum",
+            "Sweet Corn",
+            "Mushroom",
+            "Paneer",
+            "Tomato",
+            "Black Olives",
+            "Mozzarella Cheese"
+          ],
+          "image": "images/family-pizza.webp"
+        },
+        {
+          "name": "Indi Tandoor Paneer",
+          "small": 220,
+          "medium": 380,
+          "badge": "Must Try",
+          "ingredients": [
+            "Tandoori Paneer",
+            "Capsicum",
+            "Red Paprika",
+            "Mint Mayo"
+          ],
+          "image": "images/indi-tandoor-paneer.webp"
+        }
+      ]
+    },
+    {
+      "category": "Italian Pasta",
+      "items": [
+        {
+          "name": "Alfredo (White Sauce Pasta)",
+          "price": 119,
+          "baked_addon": 30,
+          "image": "images/alfredo-white-sauce-pasta.webp"
+        },
+        {
+          "name": "Arrabbiata (Red Sauce Pasta)",
+          "price": 129,
+          "baked_addon": 30,
+          "badge": "Best Seller",
+          "image": "images/arrabbiata-red-sauce-pasta.webp"
+        },
+        {
+          "name": "Tandoori Sauce Pasta",
+          "price": 139,
+          "baked_addon": 30,
+          "image": "images/tandoori-sauce-pasta.webp"
+        },
+        {
+          "name": "Makhni Sauce Pasta",
+          "price": 139,
+          "baked_addon": 30,
+          "image": "images/makhni-sauce-pasta.webp"
+        },
+        {
+          "name": "Mix Sauce Pasta",
+          "price": 139,
+          "baked_addon": 30,
+          "badge": "Must Try",
+          "image": "images/mix-sauce-pasta.webp"
+        }
+      ]
+    },
+    {
+      "category": "Wraps",
+      "items": [
+        {
+          "name": "Aloo Tikki Wrap",
+          "price": 89,
+          "image": "images/aloo-tikki-wrap.webp"
+        },
+        {
+          "name": "Veg Wrap",
+          "price": 99,
+          "image": "images/veg-wrap.webp"
+        },
+        {
+          "name": "Mexican Wave Wrap",
+          "price": 109,
+          "image": "images/mexican-wave-wrap.webp"
+        },
+        {
+          "name": "Peri-Peri Paneer Wrap",
+          "price": 119,
+          "badge": "Best Seller",
+          "image": "images/peri-peri-paneer-wrap.webp"
+        }
+      ]
+    },
+    {
+      "category": "Burger",
+      "items": [
+        {
+          "name": "Aloo Tikki Burger",
+          "price": 50,
+          "cheese_addon": 15,
+          "image": "images/aloo-tikki-burger.webp"
+        },
+        {
+          "name": "Veg Burger",
+          "price": 60,
+          "cheese_addon": 15,
+          "image": "images/veg-burger.webp"
+        },
+        {
+          "name": "Mexican Wave",
+          "price": 80,
+          "cheese_addon": 15,
+          "image": "images/mexican-wave.webp"
+        },
+        {
+          "name": "Cheese Burger",
+          "price": 89,
+          "cheese_addon": 15,
+          "badge": "Best Seller",
+          "image": "images/cheese-burger.webp"
+        },
+        {
+          "name": "Paneer Burger",
+          "price": 109,
+          "cheese_addon": 15,
+          "image": "images/paneer-burger.webp"
+        },
+        {
+          "name": "Brewton Special Burger",
+          "price": 129,
+          "cheese_addon": 15,
+          "image": "images/brewton-special-burger.webp"
+        }
+      ]
+    },
+    {
+      "category": "Quick Bites",
+      "items": [
+        {
+          "name": "Sweet Corn",
+          "price": 60,
+          "image": "images/sweet-corn.webp"
+        },
+        {
+          "name": "Sweet Corn Chaat",
+          "price": 80,
+          "image": "images/sweet-corn-chaat.webp"
+        },
+        {
+          "name": "Salted Fries",
+          "price": 70,
+          "image": "images/salted-fries.webp"
+        },
+        {
+          "name": "Peri-Peri Fries",
+          "price": 90,
+          "cheese_addon": 25,
+          "image": "images/peri-peri-fries.webp"
+        },
+        {
+          "name": "Masala Fries",
+          "price": 99,
+          "cheese_addon": 25,
+          "badge": "Must Try",
+          "image": "images/masala-fries.webp"
+        },
+        {
+          "name": "Cheese Loaded Fries",
+          "price": 109,
+          "cheese_addon": 25,
+          "image": "images/cheese-loaded-fries.webp"
+        }
+      ]
+    },
+    {
+      "category": "Side Orders",
+      "items": [
+        {
+          "name": "Plain Garlic Bread",
+          "price": 50,
+          "quantity": "Rounded 4 pcs",
+          "image": "images/plain-garlic-bread.webp"
+        },
+        {
+          "name": "Cheese Garlic Bread",
+          "price": 70,
+          "quantity": "Rounded 4 pcs",
+          "image": "images/cheese-garlic-bread.webp"
+        },
+        {
+          "name": "Veg Garlic Bread",
+          "price": 70,
+          "quantity": "Rounded 4 pcs",
+          "image": "images/veg-garlic-bread.webp"
+        },
+        {
+          "name": "Classic Veg Stuffed Garlic Bread",
+          "price": 120,
+          "ingredients": [
+            "Cheese",
+            "Corn",
+            "Tangy Jalapeno"
+          ],
+          "image": "images/classic-veg-stuffed-garlic-bread.webp"
+        },
+        {
+          "name": "Korean Corn & Jalapeno",
+          "price": 130,
+          "ingredients": [
+            "Korean Sweet Chilly Sauce",
+            "Cheese",
+            "Corn",
+            "Tangy Jalapeno"
+          ],
+          "image": "images/korean-corn-and-jalapeno.webp"
+        },
+        {
+          "name": "Paneer Stuffed Garlic Bread",
+          "price": 140,
+          "badge": "Must Try",
+          "ingredients": [
+            "Cheese",
+            "Paneer",
+            "Onion"
+          ],
+          "image": "images/paneer-stuffed-garlic-bread.webp"
+        }
+      ]
+    },
+    {
+      "category": "Sandwich",
+      "items": [
+        {
+          "name": "Mix Veg Sandwich",
+          "price": 89,
+          "cheese_addon": 25,
+          "image": "images/mix-veg-sandwich.webp"
+        },
+        {
+          "name": "Cheese Corn Sandwich",
+          "price": 99,
+          "cheese_addon": 25,
+          "image": "images/cheese-corn-sandwich.webp"
+        },
+        {
+          "name": "Mexican Wave Sandwich",
+          "price": 109,
+          "cheese_addon": 25,
+          "ingredients": [
+            "Onion",
+            "Capsicum",
+            "Red Paprika",
+            "Jalapeno",
+            "Black Olive",
+            "Garlic",
+            "Chilly"
+          ],
+          "image": "images/mexican-wave-sandwich.webp"
+        },
+        {
+          "name": "Tandoori Paneer Sandwich",
+          "price": 129,
+          "cheese_addon": 25,
+          "ingredients": [
+            "Onion",
+            "Capsicum",
+            "Paneer",
+            "Tomato"
+          ],
+          "image": "images/tandoori-paneer-sandwich.webp"
+        }
+      ]
+    },
+    {
+      "category": "Shakes",
+      "items": [
+        {
+          "name": "Vanilla Shake",
+          "price": 79,
+          "ice_cream_addon": 20,
+          "image": "images/vanilla-shake.webp"
+        },
+        {
+          "name": "Strawberry Shake",
+          "price": 99,
+          "ice_cream_addon": 20,
+          "image": "images/strawberry-shake.webp"
+        },
+        {
+          "name": "Butterscotch Shake",
+          "price": 99,
+          "ice_cream_addon": 20,
+          "image": "images/butterscotch-shake.webp"
+        },
+        {
+          "name": "Mango Shake",
+          "price": 99,
+          "ice_cream_addon": 20,
+          "image": "images/mango-shake.webp"
+        },
+        {
+          "name": "Oreo Shake",
+          "price": 110,
+          "ice_cream_addon": 20,
+          "badge": "Must Try",
+          "image": "images/oreo-shake.webp"
+        },
+        {
+          "name": "Kit-Kat Shake",
+          "price": 110,
+          "ice_cream_addon": 20,
+          "image": "images/kit-kat-shake.webp"
+        }
+      ]
+    },
+    {
+      "category": "Cold Coffee",
+      "items": [
+        {
+          "name": "Classic Cold Coffee",
+          "price": 80,
+          "badge": "Best Seller",
+          "image": "images/classic-cold-coffee.webp"
+        },
+        {
+          "name": "Extra Strong Cold Coffee",
+          "price": 100,
+          "image": "images/extra-strong-cold-coffee.webp"
+        },
+        {
+          "name": "Hazelnut Cold Coffee",
+          "price": 109,
+          "image": "images/hazelnut-cold-coffee.webp"
+        },
+        {
+          "name": "Caramel Cold Coffee",
+          "price": 109,
+          "image": "images/caramel-cold-coffee.webp"
+        },
+        {
+          "name": "Oreo Cold Coffee",
+          "price": 119,
+          "image": "images/oreo-cold-coffee.webp"
+        }
+      ]
+    },
+    {
+      "category": "Coffee Universe",
+      "items": [
+        {
+          "name": "Americano Black Coffee",
+          "price": 50,
+          "image": "images/americano-black-coffee.webp"
+        },
+        {
+          "name": "Hand Beaten Coffee",
+          "price": 60,
+          "badge": "Must Try",
+          "image": "images/hand-beaten-coffee.webp"
+        },
+        {
+          "name": "Cappuccino Coffee",
+          "price": 70,
+          "image": "images/cappuccino-coffee.webp"
+        },
+        {
+          "name": "Hazelnut Coffee",
+          "price": 80,
+          "image": "images/hazelnut-coffee.webp"
+        },
+        {
+          "name": "Caramel Coffee",
+          "price": 80,
+          "image": "images/caramel-coffee.webp"
+        },
+        {
+          "name": "Hot Chocolate",
+          "price": 80,
+          "badge": "Best Seller",
+          "image": "images/hot-chocolate.webp"
+        }
+      ]
+    },
+    {
+      "category": "Tea Mania",
+      "items": [
+        {
+          "name": "Gud Wali Chai",
+          "price": 30,
+          "image": "images/gud-wali-chai.webp"
+        },
+        {
+          "name": "Elaichi Chai",
+          "price": 30,
+          "image": "images/elaichi-chai.webp"
+        },
+        {
+          "name": "Kadak Adrak Chai",
+          "price": 30,
+          "image": "images/kadak-adrak-chai.webp"
+        },
+        {
+          "name": "Adrak Elaichi Chai",
+          "price": 30,
+          "image": "images/adrak-elaichi-chai.webp"
+        },
+        {
+          "name": "Special Masala Chai",
+          "price": 40,
+          "image": "images/special-masala-chai.webp"
+        }
+      ]
+    },
+    {
+      "category": "Mocktails",
+      "items": [
+        {
+          "name": "Mint Mojito",
+          "price": 60,
+          "image": "images/mint-mojito.webp"
+        },
+        {
+          "name": "Blue Ocean Mojito",
+          "price": 70,
+          "image": "images/blue-ocean-mojito.webp"
+        },
+        {
+          "name": "Green Apple Mojito",
+          "price": 70,
+          "image": "images/green-apple-mojito.webp"
+        },
+        {
+          "name": "Watermelon Mojito",
+          "price": 80,
+          "image": "images/watermelon-mojito.webp"
+        },
+        {
+          "name": "Blueberry Mojito",
+          "price": 80,
+          "image": "images/blueberry-mojito.webp"
+        }
+      ]
+    }
+  ]
+}
