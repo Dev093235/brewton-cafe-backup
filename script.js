@@ -302,3 +302,19 @@ loadMenuData().catch(error => {
     startFoodMotion();
   }
 })();
+
+/* BREWTON FOOD MOTION — DYNAMIC MENU FIX */
+(function(){
+  function applyFoodMotion(){
+    document.querySelectorAll('.menu-card img').forEach(function(img){
+      img.style.setProperty('animation','brewtonFoodScale 4.5s ease-in-out infinite alternate','important');
+      img.style.setProperty('will-change','transform,scale','important');
+    });
+  }
+
+  applyFoodMotion();
+
+  new MutationObserver(function(){
+    applyFoodMotion();
+  }).observe(document.body,{childList:true,subtree:true});
+})();
