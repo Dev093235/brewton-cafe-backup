@@ -342,9 +342,9 @@ loadMenuData().catch(error => {
     cards.forEach(function(card,i){
       const t = Date.now()/1000;
       const speed = 0.65 + (i % 5) * 0.07;
-      const x = Math.sin(t * speed + i * 0.8) * 3.5;
-      const y = Math.cos(t * speed * 0.7 + i) * 1.2;
-      const r = Math.sin(t * speed * 0.8 + i) * 0.18;
+      const x = Math.sin(t * speed + i * 0.8) * 8;
+      const y = Math.cos(t * speed * 0.7 + i) * 2;
+      const r = Math.sin(t * speed * 0.8 + i) * 0.35;
 
       card.style.transform =
         'translate3d(' + x.toFixed(2) + 'px,' +
