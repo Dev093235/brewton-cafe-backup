@@ -286,3 +286,19 @@ loadMenuData().catch(error => {
     `;
   }
 });
+
+/* BREWTON FOOD IMAGE MOTION — JS FALLBACK */
+(function(){
+  function startFoodMotion(){
+    document.querySelectorAll('.menu-card img').forEach(function(img){
+      img.style.setProperty('animation','brewtonFoodScale 4.5s ease-in-out infinite alternate','important');
+      img.style.setProperty('will-change','transform,scale','important');
+    });
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded',startFoodMotion);
+  }else{
+    startFoodMotion();
+  }
+})();
