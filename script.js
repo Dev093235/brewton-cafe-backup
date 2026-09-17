@@ -318,3 +318,18 @@ loadMenuData().catch(error => {
     applyFoodMotion();
   }).observe(document.body,{childList:true,subtree:true});
 })();
+
+/* BREWTON FOOD — DIRECT JS MOTION */
+(function(){
+  function animate(){
+    document.querySelectorAll('.menu-card img').forEach(function(img,i){
+      var t=Date.now()/1000;
+      var speed=0.55+(i%4)*0.08;
+      var s=1.02+((Math.sin(t*speed)+1)/2)*0.09;
+      img.style.transform='scale('+s.toFixed(4)+')';
+      img.style.willChange='transform';
+    });
+    requestAnimationFrame(animate);
+  }
+  requestAnimationFrame(animate);
+})();
