@@ -85,7 +85,45 @@
     <div id="cartItems" class="cart-items"></div>
     <div class="cart-footer"><div><span>Total</span><strong id="cartTotal">₹0</strong></div><button class="whatsapp-btn" id="checkout">Order on WhatsApp <span>↗</span></button></div>
   </div>
-  <div class="overlay" id="overlay"></div>
+  <div class="order-type-modal" id="orderTypeModal">
+  <div class="order-type-box">
+    <p class="eyebrow">ORDER TYPE</p>
+    <h3>How should we serve you?</h3>
+    <p class="order-type-sub">Choose one option to continue.</p>
+    <div class="order-type-options">
+      <button data-order-type="Take Away">🛍️ <span>Take Away</span></button>
+      <button data-order-type="Pickup">🏠 <span>Pickup</span></button>
+      <button data-order-type="Dine-in">🍽️ <span>Dine-in</span></button>
+    </div>
+  </div>
+</div>
+<div class="customer-details-modal" id="customerDetailsModal">
+  <div class="customer-details-box">
+    <button class="details-close" id="closeCustomerDetails">×</button>
+    <p class="eyebrow">CUSTOMER DETAILS</p>
+    <h3 id="detailsTitle">Where should we deliver?</h3>
+    <p class="order-type-sub">Enter the details needed for your order.</p>
+
+    <div class="details-fields">
+      <label>NAME
+        <input id="customerName" type="text" placeholder="Your name">
+      </label>
+
+      <label>PHONE
+        <input id="customerPhone" type="tel" inputmode="numeric" placeholder="10 digit mobile number">
+      </label>
+
+      <label id="addressField">ADDRESS
+        <textarea id="customerAddress" rows="3" placeholder="Your delivery address or landmark"></textarea>
+        <button type="button" id="useLocationBtn" class="location-btn">📍 Use My Current Location</button>
+        <small id="locationStatus" class="location-status"></small>
+      </label>
+    </div>
+
+    <button class="primary-btn" id="continueCustomerDetails">Continue to WhatsApp <span>→</span></button>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
 
   <div class="modal-wrap" id="modalWrap">
     <div class="modal">
@@ -93,6 +131,6 @@
       <div id="modalContent"></div>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script src="script.js?v=1006"></script>
 </body>
 </html>
