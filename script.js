@@ -333,3 +333,28 @@ loadMenuData().catch(error => {
   }
   requestAnimationFrame(animate);
 })();
+
+/* BREWTON CARD — CINEMATIC SIDE FLOAT */
+(function(){
+  function animateCards(){
+    const cards = document.querySelectorAll('.item-card');
+
+    cards.forEach(function(card,i){
+      const t = Date.now()/1000;
+      const speed = 0.65 + (i % 5) * 0.07;
+      const x = Math.sin(t * speed + i * 0.8) * 3.5;
+      const y = Math.cos(t * speed * 0.7 + i) * 1.2;
+      const r = Math.sin(t * speed * 0.8 + i) * 0.18;
+
+      card.style.transform =
+        'translate3d(' + x.toFixed(2) + 'px,' +
+        y.toFixed(2) + 'px,0) rotate(' +
+        r.toFixed(2) + 'deg)';
+    });
+
+    requestAnimationFrame(animateCards);
+  }
+
+  requestAnimationFrame(animateCards);
+})();
+
