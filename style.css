@@ -1015,3 +1015,32 @@ footer{
   }
 }
 
+
+/* BREWTON FOOD MOTION — DIRECT SCALE */
+.menu-card img{
+  animation:brewtonFoodScale 4.5s ease-in-out infinite alternate !important;
+}
+
+@keyframes brewtonFoodScale{
+  0%{
+    scale:1.02;
+  }
+  50%{
+    scale:1.07;
+  }
+  100%{
+    scale:1.12;
+  }
+}
+
+@media (max-width:600px){
+  .menu-card img{
+    animation:brewtonFoodScale 4.5s ease-in-out infinite alternate !important;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .menu-card img{
+    animation:brewtonFoodScale 4.5s ease-in-out infinite alternate !important;
+  }
+}
