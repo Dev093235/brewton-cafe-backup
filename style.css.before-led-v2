@@ -2251,84 +2251,53 @@ main,
 /* FIX: ITEM MODAL TITLE VISIBILITY */
 #itemModalTitle{color:#32150c!important;text-shadow:none!important;opacity:1!important;visibility:visible!important;}
 
-/* BREWTON — LIVE LED WALL V2 */
-html,body{
-  background-color:#120603!important;
-}
-
-body{
-  background-image:
-    radial-gradient(circle at 12% 20%,rgba(255,105,20,.34) 0,rgba(255,105,20,.16) 12%,transparent 34%),
-    radial-gradient(circle at 88% 30%,rgba(255,170,55,.28) 0,rgba(255,120,20,.12) 15%,transparent 36%),
-    radial-gradient(circle at 25% 78%,rgba(255,75,10,.25) 0,transparent 32%),
-    radial-gradient(circle at 82% 82%,rgba(255,145,30,.26) 0,transparent 34%),
-    linear-gradient(115deg,transparent 0%,rgba(255,105,15,.13) 32%,transparent 46%,rgba(255,175,55,.12) 63%,transparent 78%),
-    linear-gradient(180deg,#160704 0%,#281006 48%,#160603 100%)!important;
-
-  background-size:
-    75% 75%,
-    80% 80%,
-    75% 75%,
-    80% 80%,
-    240% 240%,
-    100% 100%!important;
-
-  background-position:
-    0% 10%,
-    100% 20%,
-    10% 100%,
-    100% 90%,
-    0% 0%,
-    center!important;
-
+/* BREWTON — LIVE LED CAFE WALL */
+body::after{
+  content:""!important;
+  position:fixed!important;
+  inset:-15%!important;
+  z-index:-1!important;
+  pointer-events:none!important;
+  background:
+    radial-gradient(circle at 15% 25%,rgba(255,104,18,.22) 0%,transparent 22%),
+    radial-gradient(circle at 85% 35%,rgba(255,160,45,.18) 0%,transparent 24%),
+    radial-gradient(circle at 45% 80%,rgba(255,82,10,.16) 0%,transparent 25%),
+    linear-gradient(115deg,transparent 20%,rgba(255,135,30,.12) 42%,transparent 52%,rgba(255,174,60,.10) 68%,transparent 78%)!important;
+  background-size:55% 55%,60% 60%,65% 65%,220% 220%!important;
+  background-position:0% 0%,100% 20%,30% 100%,0% 0%!important;
   background-repeat:no-repeat!important;
-  background-attachment:scroll!important;
-  animation:brewtonLedV2 18s ease-in-out infinite alternate!important;
+  filter:blur(22px) saturate(1.25)!important;
+  opacity:.85!important;
+  mix-blend-mode:screen!important;
+  animation:brewtonLedWall 16s ease-in-out infinite alternate!important;
 }
 
-@keyframes brewtonLedV2{
+@keyframes brewtonLedWall{
   0%{
-    background-position:
-      0% 10%,100% 20%,10% 100%,100% 90%,0% 0%,center;
+    background-position:0% 0%,100% 20%,30% 100%,0% 0%;
+    transform:scale(1);
   }
-  30%{
-    background-position:
-      25% 30%,75% 10%,35% 75%,80% 65%,35% 30%,center;
+  35%{
+    background-position:35% 25%,70% 45%,60% 70%,35% 25%;
+    transform:scale(1.04);
   }
-  60%{
-    background-position:
-      65% 15%,30% 45%,70% 55%,20% 80%,70% 65%,center;
+  70%{
+    background-position:70% 55%,25% 15%,10% 35%,70% 55%;
+    transform:scale(1.07);
   }
   100%{
-    background-position:
-      100% 40%,0% 70%,90% 20%,10% 40%,100% 100%,center;
+    background-position:100% 80%,0% 70%,80% 10%,100% 80%;
+    transform:scale(1);
   }
 }
 
 @media(max-width:700px){
-  body{
-    background-size:
-      95% 75%,
-      100% 80%,
-      95% 75%,
-      100% 80%,
-      300% 300%,
-      100% 100%!important;
-    animation-duration:20s!important;
+  body::after{
+    filter:blur(18px) saturate(1.2)!important;
+    opacity:.68!important;
   }
 }
 
 @media(prefers-reduced-motion:reduce){
-  body{animation:none!important}
+  body::after{animation:none!important}
 }
-
-/* FIX: ORDER TYPE TITLE VISIBILITY */
-#orderTypeTitle{color:#32150c!important;text-shadow:none!important;opacity:1!important;visibility:visible!important;}
-
-/* FIX: CUSTOMER MODAL TITLE VISIBILITY */
-#customerTitle{color:#32150c!important;text-shadow:none!important;opacity:1!important;visibility:visible!important;}
-
-/* FIX: CART TEXT VISIBILITY */
-.cart-drawer .drawer-head h3,
-.cart-drawer .cart-row h4,
-.cart-drawer .total-row span{color:#32150c!important;text-shadow:none!important;opacity:1!important;visibility:visible!important;}

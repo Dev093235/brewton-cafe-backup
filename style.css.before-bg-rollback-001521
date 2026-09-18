@@ -2248,87 +2248,151 @@ main,
   }
 }
 
-/* FIX: ITEM MODAL TITLE VISIBILITY */
-#itemModalTitle{color:#32150c!important;text-shadow:none!important;opacity:1!important;visibility:visible!important;}
-
-/* BREWTON — LIVE LED WALL V2 */
-html,body{
-  background-color:#120603!important;
+/* BREWTON — EXTEND EXISTING BACKGROUND THROUGH FULL PAGE */
+html{
+  min-height:100%!important;
 }
 
 body{
-  background-image:
-    radial-gradient(circle at 12% 20%,rgba(255,105,20,.34) 0,rgba(255,105,20,.16) 12%,transparent 34%),
-    radial-gradient(circle at 88% 30%,rgba(255,170,55,.28) 0,rgba(255,120,20,.12) 15%,transparent 36%),
-    radial-gradient(circle at 25% 78%,rgba(255,75,10,.25) 0,transparent 32%),
-    radial-gradient(circle at 82% 82%,rgba(255,145,30,.26) 0,transparent 34%),
-    linear-gradient(115deg,transparent 0%,rgba(255,105,15,.13) 32%,transparent 46%,rgba(255,175,55,.12) 63%,transparent 78%),
-    linear-gradient(180deg,#160704 0%,#281006 48%,#160603 100%)!important;
+  position:relative!important;
+  min-height:100vh!important;
+  background-attachment:scroll!important;
+}
 
-  background-size:
-    75% 75%,
-    80% 80%,
-    75% 75%,
-    80% 80%,
-    240% 240%,
-    100% 100%!important;
+/* Existing food visuals: stretch with the complete document */
+body::before{
+  position:absolute!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  width:100%!important;
+  height:100%!important;
+  min-height:100%!important;
+  pointer-events:none!important;
+}
+
+body::after{
+  position:absolute!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  width:100%!important;
+  height:100%!important;
+  min-height:100%!important;
+  pointer-events:none!important;
+}
+
+/* BREWTON — FINAL BALANCED FOOD VISUALS */
+html,body{
+  background-color:#160804!important;
+  overflow-x:hidden!important;
+}
+
+/* One even café base — no left/right colour split */
+body{
+  background-image:
+    linear-gradient(180deg,#160804 0%,#241007 35%,#1b0a05 68%,#160604 100%),
+    url("images/family-pizza.webp"),
+    url("images/brewton-special-burger.webp"),
+    url("images/cappuccino-coffee.webp"),
+    url("images/cheese-loaded-fries.webp"),
+    url("images/exotic-veg-pizza.webp"),
+    url("images/alfredo-white-sauce-pasta.webp"),
+    url("images/aloo-tikki-wrap.webp"),
+    url("images/blueberry-mojito.webp"),
+    url("images/cheese-garlic-bread.webp"),
+    url("images/brewton-special-maggi.webp")!important;
+
+  background-repeat:
+    no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,
+    no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat!important;
 
   background-position:
-    0% 10%,
-    100% 20%,
-    10% 100%,
-    100% 90%,
-    0% 0%,
-    center!important;
+    center,
+    left -55px top 7%,
+    right -55px top 16%,
+    left -45px top 27%,
+    right -45px top 37%,
+    left -50px top 48%,
+    right -50px top 59%,
+    left -45px top 70%,
+    right -45px top 80%,
+    left -45px top 90%,
+    right -45px top 97%!important;
 
-  background-repeat:no-repeat!important;
+  background-size:
+    100% 100%,
+    230px auto,
+    235px auto,
+    210px auto,
+    215px auto,
+    225px auto,
+    230px auto,
+    215px auto,
+    210px auto,
+    215px auto,
+    220px auto!important;
+
   background-attachment:scroll!important;
-  animation:brewtonLedV2 18s ease-in-out infinite alternate!important;
 }
 
-@keyframes brewtonLedV2{
-  0%{
-    background-position:
-      0% 10%,100% 20%,10% 100%,100% 90%,0% 0%,center;
-  }
-  30%{
-    background-position:
-      25% 30%,75% 10%,35% 75%,80% 65%,35% 30%,center;
-  }
-  60%{
-    background-position:
-      65% 15%,30% 45%,70% 55%,20% 80%,70% 65%,center;
-  }
-  100%{
-    background-position:
-      100% 40%,0% 70%,90% 20%,10% 40%,100% 100%,center;
-  }
+/* Remove old pseudo-image/strip layers; keep only soft atmosphere */
+body::before{
+  background:
+    radial-gradient(circle at 8% 12%,rgba(255,174,74,.18) 0 3px,transparent 7px),
+    radial-gradient(circle at 92% 22%,rgba(255,174,74,.16) 0 3px,transparent 7px),
+    radial-gradient(circle at 7% 42%,rgba(244,119,33,.14) 0 3px,transparent 7px),
+    radial-gradient(circle at 93% 63%,rgba(255,174,74,.14) 0 3px,transparent 7px),
+    radial-gradient(circle at 7% 84%,rgba(244,119,33,.14) 0 3px,transparent 7px)!important;
+  opacity:1!important;
+  filter:none!important;
 }
 
+/* No vignette strips over the food visuals */
+body::after{
+  background:
+    radial-gradient(ellipse at center,transparent 35%,rgba(5,2,1,.16) 100%)!important;
+  animation:none!important;
+}
+
+/* Mobile: same full-page visual rhythm, smaller and sharper */
 @media(max-width:700px){
   body{
+    background-position:
+      center,
+      left -48px top 5%,
+      right -48px top 15%,
+      left -42px top 25%,
+      right -42px top 35%,
+      left -45px top 46%,
+      right -45px top 57%,
+      left -42px top 68%,
+      right -42px top 78%,
+      left -42px top 88%,
+      right -42px top 97%!important;
+
     background-size:
-      95% 75%,
-      100% 80%,
-      95% 75%,
-      100% 80%,
-      300% 300%,
-      100% 100%!important;
-    animation-duration:20s!important;
+      100% 100%,
+      205px auto,
+      210px auto,
+      190px auto,
+      195px auto,
+      205px auto,
+      205px auto,
+      195px auto,
+      190px auto,
+      195px auto,
+      200px auto!important;
+
+    background-attachment:scroll!important;
+  }
+
+  body::before{
+    opacity:.9!important;
+  }
+
+  body::after{
+    opacity:.75!important;
   }
 }
 
-@media(prefers-reduced-motion:reduce){
-  body{animation:none!important}
-}
-
-/* FIX: ORDER TYPE TITLE VISIBILITY */
-#orderTypeTitle{color:#32150c!important;text-shadow:none!important;opacity:1!important;visibility:visible!important;}
-
-/* FIX: CUSTOMER MODAL TITLE VISIBILITY */
-#customerTitle{color:#32150c!important;text-shadow:none!important;opacity:1!important;visibility:visible!important;}
-
-/* FIX: CART TEXT VISIBILITY */
-.cart-drawer .drawer-head h3,
-.cart-drawer .cart-row h4,
-.cart-drawer .total-row span{color:#32150c!important;text-shadow:none!important;opacity:1!important;visibility:visible!important;}

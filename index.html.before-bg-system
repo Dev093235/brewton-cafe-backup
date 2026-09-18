@@ -208,6 +208,6 @@
   </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="script.js?v=20260919delivery" defer></script>
+  <script src="script.js?v=99999999" defer></script>
 </body>
 </html>

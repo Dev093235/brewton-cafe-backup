@@ -2091,6 +2091,672 @@ main,
     animation:none !important;
   }
 }
+/* BREWTON FULL PAGE CINEMATIC BG FINAL */
+
+/* One continuous cinematic café canvas for the ENTIRE menu */
+html{
+  background:#120603!important;
+}
+
+body{
+  min-height:100vh!important;
+  background-color:#120603!important;
+  background-image:
+    linear-gradient(90deg,rgba(5,2,1,.72),rgba(30,10,4,.28) 20%,rgba(30,10,4,.20) 50%,rgba(30,10,4,.30) 80%,rgba(5,2,1,.75)),
+    linear-gradient(180deg,rgba(5,2,1,.30),rgba(20,7,3,.10) 35%,rgba(5,2,1,.42) 100%),
+
+    url("images/family-pizza.webp"),
+    url("images/brewton-special-burger.webp"),
+    url("images/cappuccino-coffee.webp"),
+    url("images/cheese-loaded-fries.webp"),
+    url("images/exotic-veg-pizza.webp"),
+    url("images/alfredo-white-sauce-pasta.webp"),
+    url("images/aloo-tikki-wrap.webp"),
+    url("images/blueberry-mojito.webp"),
+
+    radial-gradient(circle at 50% 20%,rgba(244,119,33,.24),transparent 28%),
+    linear-gradient(135deg,#0d0402,#321308 48%,#100503)!important;
+
+  background-repeat:
+    no-repeat,no-repeat,
+    no-repeat,no-repeat,no-repeat,no-repeat,
+    no-repeat,no-repeat,no-repeat,no-repeat,
+    no-repeat,no-repeat!important;
+
+  background-position:
+    center,center,
+    left 1% top 7%,
+    right 1% top 17%,
+    left 1% top 30%,
+    right 1% top 42%,
+    left 1% top 55%,
+    right 1% top 67%,
+    left 1% top 80%,
+    right 1% top 92%,
+    center,center!important;
+
+  background-size:
+    cover,cover,
+    270px auto,
+    280px auto,
+    230px auto,
+    250px auto,
+    270px auto,
+    250px auto,
+    250px auto,
+    230px auto,
+    cover,cover!important;
+
+  background-attachment:scroll!important;
+  background-origin:border-box!important;
+  overflow-x:hidden!important;
+}
+
+/* Warm cinematic lighting across the whole page */
+body::before{
+  content:"";
+  position:absolute!important;
+  left:0!important;
+  top:0!important;
+  width:100%!important;
+  height:100%!important;
+  min-height:100%!important;
+  z-index:0!important;
+  pointer-events:none!important;
+  background:
+    radial-gradient(circle at 8% 12%,rgba(255,174,74,.20) 0 3px,transparent 6px),
+    radial-gradient(circle at 92% 20%,rgba(255,174,74,.18) 0 3px,transparent 6px),
+    radial-gradient(circle at 7% 36%,rgba(255,140,40,.16) 0 3px,transparent 6px),
+    radial-gradient(circle at 94% 48%,rgba(255,174,74,.17) 0 3px,transparent 6px),
+    radial-gradient(circle at 6% 64%,rgba(255,140,40,.16) 0 3px,transparent 6px),
+    radial-gradient(circle at 95% 78%,rgba(255,174,74,.18) 0 3px,transparent 6px),
+    radial-gradient(ellipse at center,transparent 30%,rgba(5,2,1,.30) 100%)!important;
+  animation:brewtonFullGlow 11s ease-in-out infinite alternate!important;
+}
+
+@keyframes brewtonFullGlow{
+  0%{opacity:.60}
+  50%{opacity:.88}
+  100%{opacity:.68}
+}
+
+/* Dark cinematic overlay, but food remains visible */
+body::after{
+  content:"";
+  position:absolute!important;
+  left:0!important;
+  top:0!important;
+  width:100%!important;
+  height:100%!important;
+  min-height:100%!important;
+  z-index:0!important;
+  pointer-events:none!important;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.35),transparent 18%,transparent 82%,rgba(0,0,0,.38)),
+    linear-gradient(180deg,rgba(0,0,0,.18),transparent 15%,transparent 85%,rgba(0,0,0,.38))!important;
+}
+
+/* All actual website content stays above the cinematic canvas */
+body > *,
+main,
+header,
+nav,
+.hero,
+.hero-section,
+.menu-section,
+.menu-container,
+.menu-page,
+.menu-content,
+.category-block,
+.items{
+  position:relative;
+  z-index:1;
+}
+
+/* Transparent sections so background continues underneath */
+main,
+.hero,
+.hero-section,
+.menu-section,
+.menu-container,
+.menu-page,
+.menu-content,
+.category-block,
+.items{
+  background:transparent!important;
+}
+
+/* Cards stay untouched and readable */
+.item-card{
+  position:relative!important;
+  z-index:5!important;
+}
+
+/* Headings get cinematic separation */
+.category-block h1,
+.category-block h2,
+.category-block h3,
+.category-title{
+  position:relative;
+  z-index:6;
+  text-shadow:
+    0 3px 14px rgba(0,0,0,.85),
+    0 0 28px rgba(244,119,33,.16)!important;
+}
+
+/* Android: smaller side food, but decoration continues down entire page */
+@media(max-width:700px){
+  body{
+    background-attachment:scroll!important;
+    background-position:
+      center,center,
+      left -80px top 7%,
+      right -80px top 18%,
+      left -65px top 31%,
+      right -70px top 43%,
+      left -75px top 56%,
+      right -70px top 68%,
+      left -70px top 81%,
+      right -65px top 93%,
+      center,center!important;
+
+    background-size:
+      auto,auto,
+      190px auto,
+      195px auto,
+      170px auto,
+      180px auto,
+      190px auto,
+      180px auto,
+      180px auto,
+      170px auto,
+      auto,auto!important;
+  }
+
+  body::before,
+  body::after{
+    position:absolute!important;
+    height:100%!important;
+  }
+
+  main,
+  .menu-section,
+  .menu-container,
+  .menu-page,
+  .category-block,
+  .items{
+    background:transparent!important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  body::before{
+    animation:none!important;
+  }
+}
+/* BREWTON CINEMATIC VISIBILITY BOOST FINAL */
+
+@media(max-width:700px){
+  body{
+    background-position:
+      center,center,
+      left -55px top 7%,
+      right -55px top 18%,
+      left -45px top 31%,
+      right -50px top 43%,
+      left -50px top 56%,
+      right -50px top 68%,
+      left -48px top 81%,
+      right -45px top 93%,
+      center,center!important;
+
+    background-size:
+      auto,auto,
+      235px auto,
+      240px auto,
+      210px auto,
+      220px auto,
+      235px auto,
+      225px auto,
+      220px auto,
+      210px auto,
+      auto,auto!important;
+  }
+
+  body::before{
+    opacity:1!important;
+    background:
+      radial-gradient(circle at 8% 12%,rgba(255,174,74,.28) 0 3px,transparent 6px),
+      radial-gradient(circle at 92% 20%,rgba(255,174,74,.26) 0 3px,transparent 6px),
+      radial-gradient(circle at 7% 36%,rgba(255,140,40,.23) 0 3px,transparent 6px),
+      radial-gradient(circle at 94% 48%,rgba(255,174,74,.24) 0 3px,transparent 6px),
+      radial-gradient(circle at 6% 64%,rgba(255,140,40,.22) 0 3px,transparent 6px),
+      radial-gradient(circle at 95% 78%,rgba(255,174,74,.25) 0 3px,transparent 6px),
+      radial-gradient(ellipse at center,transparent 35%,rgba(5,2,1,.20) 100%)!important;
+  }
+
+  body::after{
+    background:
+      linear-gradient(90deg,rgba(0,0,0,.20),transparent 14%,transparent 86%,rgba(0,0,0,.23)),
+      linear-gradient(180deg,rgba(0,0,0,.12),transparent 15%,transparent 85%,rgba(0,0,0,.25))!important;
+  }
+}
+/* BREWTON EMPTY SPACE FILL FINAL */
+
+@media(max-width:700px){
+
+  /* Fill empty areas with larger, softer café food silhouettes */
+  body{
+    background-position:
+      center,center,
+      left -35px top 5%,
+      right -35px top 16%,
+      left -25px top 29%,
+      right -30px top 41%,
+      left -30px top 54%,
+      right -25px top 66%,
+      left -28px top 79%,
+      right -25px top 92%,
+      center,center!important;
+
+    background-size:
+      auto,auto,
+      265px auto,
+      270px auto,
+      235px auto,
+      245px auto,
+      265px auto,
+      255px auto,
+      250px auto,
+      240px auto,
+      auto,auto!important;
+  }
+
+  /* Extra café glow between card groups */
+  body::before{
+    opacity:1!important;
+    background:
+      radial-gradient(ellipse at 8% 8%,rgba(255,174,74,.22),transparent 18%),
+      radial-gradient(ellipse at 92% 19%,rgba(244,119,33,.20),transparent 18%),
+      radial-gradient(ellipse at 6% 32%,rgba(255,174,74,.18),transparent 17%),
+      radial-gradient(ellipse at 94% 45%,rgba(244,119,33,.18),transparent 18%),
+      radial-gradient(ellipse at 7% 58%,rgba(255,174,74,.18),transparent 18%),
+      radial-gradient(ellipse at 93% 71%,rgba(244,119,33,.20),transparent 18%),
+      radial-gradient(ellipse at 7% 84%,rgba(255,174,74,.18),transparent 18%),
+      radial-gradient(ellipse at 93% 96%,rgba(244,119,33,.18),transparent 18%),
+      radial-gradient(ellipse at center,transparent 32%,rgba(5,2,1,.14) 100%)!important;
+  }
+
+  /* Softer vignette so the decoration remains visible */
+  body::after{
+    background:
+      linear-gradient(90deg,rgba(0,0,0,.16),transparent 12%,transparent 88%,rgba(0,0,0,.18)),
+      linear-gradient(180deg,rgba(0,0,0,.08),transparent 12%,transparent 88%,rgba(0,0,0,.20))!important;
+  }
+}
+/* BREWTON COMPLETE PAGE COVER */
+@media(max-width:700px){
+  body{
+    background-position:
+      center,center,
+      left -15px top 3%,
+      right -15px top 10%,
+      left -20px top 17%,
+      right -18px top 24%,
+      left -15px top 31%,
+      right -15px top 38%,
+      left -20px top 45%,
+      right -18px top 52%,
+      left -15px top 59%,
+      right -15px top 66%,
+      left -20px top 73%,
+      right -18px top 80%,
+      left -15px top 87%,
+      right -15px top 94%,
+      center,center!important;
+
+    background-size:
+      auto,auto,
+      210px auto,
+      220px auto,
+      205px auto,
+      220px auto,
+      215px auto,
+      225px auto,
+      205px auto,
+      220px auto,
+      215px auto,
+      225px auto,
+      210px auto,
+      220px auto,
+      205px auto,
+      220px auto,
+      auto,auto!important;
+
+    background-repeat:no-repeat!important;
+    background-color:#160b06!important;
+  }
+
+  body::before{
+    opacity:1!important;
+    background:
+      radial-gradient(ellipse at 5% 4%,rgba(255,160,55,.18),transparent 16%),
+      radial-gradient(ellipse at 95% 11%,rgba(244,119,33,.18),transparent 16%),
+      radial-gradient(ellipse at 5% 18%,rgba(255,160,55,.16),transparent 16%),
+      radial-gradient(ellipse at 95% 25%,rgba(244,119,33,.17),transparent 16%),
+      radial-gradient(ellipse at 5% 32%,rgba(255,160,55,.16),transparent 16%),
+      radial-gradient(ellipse at 95% 39%,rgba(244,119,33,.17),transparent 16%),
+      radial-gradient(ellipse at 5% 46%,rgba(255,160,55,.16),transparent 16%),
+      radial-gradient(ellipse at 95% 53%,rgba(244,119,33,.17),transparent 16%),
+      radial-gradient(ellipse at 5% 60%,rgba(255,160,55,.16),transparent 16%),
+      radial-gradient(ellipse at 95% 67%,rgba(244,119,33,.17),transparent 16%),
+      radial-gradient(ellipse at 5% 74%,rgba(255,160,55,.16),transparent 16%),
+      radial-gradient(ellipse at 95% 81%,rgba(244,119,33,.17),transparent 16%),
+      radial-gradient(ellipse at 5% 88%,rgba(255,160,55,.16),transparent 16%),
+      radial-gradient(ellipse at 95% 95%,rgba(244,119,33,.17),transparent 16%),
+      radial-gradient(ellipse at center,transparent 28%,rgba(5,2,1,.12) 100%)!important;
+  }
+
+  body::after{
+    background:
+      linear-gradient(90deg,rgba(0,0,0,.10),transparent 10%,transparent 90%,rgba(0,0,0,.12)),
+      linear-gradient(180deg,rgba(0,0,0,.05),transparent 10%,transparent 90%,rgba(0,0,0,.12))!important;
+  }
+}
+
+
+/* BREWTON BACKGROUND VISUAL BOOST */
+@media(max-width:700px){
+  body{
+    background-size:
+      auto,auto,
+      340px auto,360px auto,
+      320px auto,350px auto,
+      340px auto,360px auto,
+      320px auto,350px auto,
+      340px auto,360px auto,
+      320px auto,350px auto,
+      340px auto,360px auto,
+      auto,auto!important;
+    background-position:
+      center,center,
+      left -55px top 3%,right -55px top 10%,
+      left -50px top 17%,right -55px top 24%,
+      left -55px top 31%,right -50px top 38%,
+      left -55px top 45%,right -50px top 52%,
+      left -55px top 59%,right -55px top 66%,
+      left -50px top 73%,right -55px top 80%,
+      left -55px top 87%,right -50px top 94%,
+      center,center!important;
+  }
+
+  body::before{
+    background:
+      radial-gradient(ellipse at 7% 8%,rgba(255,170,70,.30),transparent 22%),
+      radial-gradient(ellipse at 93% 20%,rgba(244,119,33,.28),transparent 22%),
+      radial-gradient(ellipse at 7% 34%,rgba(255,170,70,.28),transparent 22%),
+      radial-gradient(ellipse at 93% 48%,rgba(244,119,33,.28),transparent 22%),
+      radial-gradient(ellipse at 7% 62%,rgba(255,170,70,.28),transparent 22%),
+      radial-gradient(ellipse at 93% 76%,rgba(244,119,33,.28),transparent 22%),
+      radial-gradient(ellipse at 7% 90%,rgba(255,170,70,.28),transparent 22%),
+      radial-gradient(ellipse at center,transparent 25%,rgba(5,2,1,.08) 100%)!important;
+  }
+}
+/* BREWTON FULL HEIGHT VISUALS */
+@media(max-width:700px){
+  body{
+    background-repeat:
+      no-repeat,no-repeat,
+      repeat-y,repeat-y,
+      repeat-y,repeat-y,
+      repeat-y,repeat-y,
+      repeat-y,repeat-y,
+      no-repeat,no-repeat!important;
+
+    background-size:
+      auto,auto,
+      300px auto,300px auto,
+      300px auto,300px auto,
+      300px auto,300px auto,
+      300px auto,300px auto,
+      auto,auto!important;
+
+    background-position:
+      center,center,
+      left -45px top 2%,
+      right -45px top 9%,
+      left -45px top 16%,
+      right -45px top 23%,
+      left -45px top 30%,
+      right -45px top 37%,
+      left -45px top 44%,
+      right -45px top 51%,
+      center,center!important;
+  }
+
+  body::before{
+    opacity:1!important;
+  }
+}
+/* BREWTON FINAL MIXED FOOD WALL */
+@media(max-width:700px){
+  body{
+    background-color:#160906!important;
+    background-image:
+      linear-gradient(90deg,rgba(10,3,1,.30),rgba(10,3,1,.04) 25%,rgba(10,3,1,.04) 75%,rgba(10,3,1,.32)),
+      url("images/family-pizza.webp"),
+      url("images/brewton-special-burger.webp"),
+      url("images/cappuccino-coffee.webp"),
+      url("images/cheese-loaded-fries.webp"),
+      url("images/alfredo-white-sauce-pasta.webp"),
+      url("images/mexican-wave-sandwich.webp"),
+      url("images/aloo-tikki-wrap.webp"),
+      url("images/blueberry-mojito.webp"),
+      url("images/exotic-veg-pizza.webp"),
+      url("images/cheese-garlic-bread.webp"),
+      url("images/kit-kat-shake.webp"),
+      url("images/mix-sauce-pasta.webp"),
+      url("images/lovely-cheese-margherita.webp"),
+      url("images/green-apple-mojito.webp"),
+      url("images/brewton-special-maggi.webp"),
+      url("images/cheese-corn-sandwich.webp"),
+      url("images/mango-shake.webp"),
+      url("images/indi-tandoor-paneer.webp");
+
+    background-repeat:
+      no-repeat,
+      no-repeat,no-repeat,no-repeat,no-repeat,
+      no-repeat,no-repeat,no-repeat,no-repeat,
+      no-repeat,no-repeat,no-repeat,no-repeat,
+      no-repeat,no-repeat,no-repeat,no-repeat,
+      no-repeat,no-repeat,no-repeat!important;
+
+    background-size:
+      100% 100%,
+      270px auto,275px auto,
+      250px auto,260px auto,
+      265px auto,255px auto,
+      270px auto,250px auto,
+      270px auto,255px auto,
+      260px auto,270px auto,
+      255px auto,265px auto,
+      260px auto,250px auto,
+      265px auto!important;
+
+    background-position:
+      center,
+      left -55px top 2%,
+      right -55px top 8%,
+      left -45px top 14%,
+      right -50px top 20%,
+      left -55px top 26%,
+      right -45px top 32%,
+      left -50px top 38%,
+      right -55px top 44%,
+      left -45px top 50%,
+      right -50px top 56%,
+      left -55px top 62%,
+      right -45px top 68%,
+      left -50px top 74%,
+      right -55px top 80%,
+      left -45px top 86%,
+      right -50px top 92%,
+      left -55px bottom 1%!important;
+  }
+
+  body::before{
+    opacity:.18!important;
+    background:
+      radial-gradient(circle at 5% 15%,rgba(255,166,65,.8),transparent 18%),
+      radial-gradient(circle at 95% 35%,rgba(244,119,33,.75),transparent 18%),
+      radial-gradient(circle at 5% 58%,rgba(255,166,65,.7),transparent 18%),
+      radial-gradient(circle at 95% 80%,rgba(244,119,33,.7),transparent 18%)!important;
+  }
+
+  body::after{
+    background:linear-gradient(
+      90deg,
+      rgba(0,0,0,.18),
+      transparent 16%,
+      transparent 84%,
+      rgba(0,0,0,.20)
+    )!important;
+  }
+}
+/* BREWTON FINAL SHARP FULL WEBSITE BG */
+html,body{
+  background-color:#140704!important;
+  background-attachment:scroll!important;
+}
+
+main,
+section,
+.menu-section,
+.category-section{
+  background-color:transparent!important;
+  background-image:none!important;
+}
+
+body::before{
+  content:""!important;
+  position:absolute!important;
+  left:0!important;
+  top:0!important;
+  width:100%!important;
+  height:100%!important;
+  min-height:100%!important;
+  z-index:0!important;
+  pointer-events:none!important;
+  filter:none!important;
+  -webkit-filter:none!important;
+  opacity:1!important;
+
+  background-image:
+    linear-gradient(90deg,rgba(8,2,0,.12),transparent 22%,transparent 78%,rgba(8,2,0,.15)),
+    url("images/family-pizza.webp"),
+    url("images/brewton-special-burger.webp"),
+    url("images/cappuccino-coffee.webp"),
+    url("images/cheese-loaded-fries.webp"),
+    url("images/alfredo-white-sauce-pasta.webp"),
+    url("images/mexican-wave-sandwich.webp"),
+    url("images/aloo-tikki-wrap.webp"),
+    url("images/blueberry-mojito.webp"),
+    url("images/cheese-garlic-bread.webp"),
+    url("images/kit-kat-shake.webp"),
+    url("images/mix-sauce-pasta.webp"),
+    url("images/exotic-veg-pizza.webp"),
+    url("images/green-apple-mojito.webp"),
+    url("images/brewton-special-maggi.webp"),
+    url("images/cheese-corn-sandwich.webp"),
+    url("images/mango-shake.webp"),
+    url("images/indi-tandoor-paneer.webp"),
+    url("images/lovely-cheese-margherita.webp"),
+    url("images/masala-fries.webp"),
+    url("images/cheese-loaded-fries.webp");
+
+  background-repeat:
+    no-repeat,
+    no-repeat,no-repeat,no-repeat,no-repeat,
+    no-repeat,no-repeat,no-repeat,no-repeat,
+    no-repeat,no-repeat,no-repeat,no-repeat,
+    no-repeat,no-repeat,no-repeat,no-repeat,
+    no-repeat,no-repeat,no-repeat,no-repeat!important;
+
+  background-size:
+    100% 100%,
+    300px auto,300px auto,
+    280px auto,290px auto,
+    295px auto,280px auto,
+    300px auto,275px auto,
+    290px auto,285px auto,
+    300px auto,280px auto,
+    290px auto,285px auto,
+    300px auto,280px auto,
+    290px auto,285px auto,
+    300px auto!important;
+
+  background-position:
+    center,
+    left -95px top 1%,
+    right -95px top 5.5%,
+    left -90px top 10%,
+    right -90px top 14.5%,
+    left -95px top 19%,
+    right -90px top 23.5%,
+    left -90px top 28%,
+    right -95px top 32.5%,
+    left -90px top 37%,
+    right -90px top 41.5%,
+    left -95px top 46%,
+    right -90px top 50.5%,
+    left -90px top 55%,
+    right -95px top 59.5%,
+    left -90px top 64%,
+    right -90px top 68.5%,
+    left -95px top 73%,
+    right -90px top 77.5%,
+    left -90px top 82%,
+    right -95px top 87%!important;
+}
+
+
+
+.item-card,
+.menu-card,
+.card{
+  position:relative!important;
+  z-index:2!important;
+}
+
+body::after{
+  filter:none!important;
+  -webkit-filter:none!important;
+  opacity:1!important;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.08),transparent 14%,transparent 86%,rgba(0,0,0,.10)),
+    linear-gradient(180deg,rgba(0,0,0,.04),transparent 12%,transparent 88%,rgba(0,0,0,.08))!important;
+}
+
+@media(max-width:700px){
+  body::before{
+    background-size:
+      100% 100%,
+      310px auto,315px auto,
+      295px auto,305px auto,
+      315px auto,300px auto,
+      320px auto,295px auto,
+      305px auto,300px auto,
+      315px auto,300px auto,
+      305px auto,315px auto,
+      295px auto,310px auto,
+      300px auto,315px auto,
+      305px auto!important;
+
+    opacity:1!important;
+    filter:none!important;
+    -webkit-filter:none!important;
+  }
+}
 
 /* BREWTON PREMIUM FINAL FOOTER */
 .brewton-final-footer{
@@ -2248,87 +2914,36 @@ main,
   }
 }
 
-/* FIX: ITEM MODAL TITLE VISIBILITY */
-#itemModalTitle{color:#32150c!important;text-shadow:none!important;opacity:1!important;visibility:visible!important;}
-
-/* BREWTON — LIVE LED WALL V2 */
-html,body{
-  background-color:#120603!important;
+/* BREWTON — EXTEND EXISTING BACKGROUND THROUGH FULL PAGE */
+html{
+  min-height:100%!important;
 }
 
 body{
-  background-image:
-    radial-gradient(circle at 12% 20%,rgba(255,105,20,.34) 0,rgba(255,105,20,.16) 12%,transparent 34%),
-    radial-gradient(circle at 88% 30%,rgba(255,170,55,.28) 0,rgba(255,120,20,.12) 15%,transparent 36%),
-    radial-gradient(circle at 25% 78%,rgba(255,75,10,.25) 0,transparent 32%),
-    radial-gradient(circle at 82% 82%,rgba(255,145,30,.26) 0,transparent 34%),
-    linear-gradient(115deg,transparent 0%,rgba(255,105,15,.13) 32%,transparent 46%,rgba(255,175,55,.12) 63%,transparent 78%),
-    linear-gradient(180deg,#160704 0%,#281006 48%,#160603 100%)!important;
-
-  background-size:
-    75% 75%,
-    80% 80%,
-    75% 75%,
-    80% 80%,
-    240% 240%,
-    100% 100%!important;
-
-  background-position:
-    0% 10%,
-    100% 20%,
-    10% 100%,
-    100% 90%,
-    0% 0%,
-    center!important;
-
-  background-repeat:no-repeat!important;
+  position:relative!important;
+  min-height:100vh!important;
   background-attachment:scroll!important;
-  animation:brewtonLedV2 18s ease-in-out infinite alternate!important;
 }
 
-@keyframes brewtonLedV2{
-  0%{
-    background-position:
-      0% 10%,100% 20%,10% 100%,100% 90%,0% 0%,center;
-  }
-  30%{
-    background-position:
-      25% 30%,75% 10%,35% 75%,80% 65%,35% 30%,center;
-  }
-  60%{
-    background-position:
-      65% 15%,30% 45%,70% 55%,20% 80%,70% 65%,center;
-  }
-  100%{
-    background-position:
-      100% 40%,0% 70%,90% 20%,10% 40%,100% 100%,center;
-  }
+/* Existing food visuals: stretch with the complete document */
+body::before{
+  position:absolute!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  width:100%!important;
+  height:100%!important;
+  min-height:100%!important;
+  pointer-events:none!important;
 }
 
-@media(max-width:700px){
-  body{
-    background-size:
-      95% 75%,
-      100% 80%,
-      95% 75%,
-      100% 80%,
-      300% 300%,
-      100% 100%!important;
-    animation-duration:20s!important;
-  }
+body::after{
+  position:absolute!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  width:100%!important;
+  height:100%!important;
+  min-height:100%!important;
+  pointer-events:none!important;
 }
-
-@media(prefers-reduced-motion:reduce){
-  body{animation:none!important}
-}
-
-/* FIX: ORDER TYPE TITLE VISIBILITY */
-#orderTypeTitle{color:#32150c!important;text-shadow:none!important;opacity:1!important;visibility:visible!important;}
-
-/* FIX: CUSTOMER MODAL TITLE VISIBILITY */
-#customerTitle{color:#32150c!important;text-shadow:none!important;opacity:1!important;visibility:visible!important;}
-
-/* FIX: CART TEXT VISIBILITY */
-.cart-drawer .drawer-head h3,
-.cart-drawer .cart-row h4,
-.cart-drawer .total-row span{color:#32150c!important;text-shadow:none!important;opacity:1!important;visibility:visible!important;}

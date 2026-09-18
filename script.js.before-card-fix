@@ -66,7 +66,7 @@ function itemCard(item, index){
   return `<article class="item-card">
     <div class="item-visual">${image}${item.badge?`<span class="badge">${esc(item.badge)}</span>`:''}</div>
     <div class="item-info"><h4>${esc(item.name)}</h4><div class="ingredients">${esc(itemInfo(item))}</div>
-    ${pizza?`<div class="pizza-prices"><div class="brew-size"><span>Small</span><b>${money(item.small)}</b></div><div class="brew-size"><span>Medium</span><b>${money(item.medium)}</b></div><button class="add-btn" type="button" data-item='${json}'>Add to order</button></div>`:
+    ${pizza?`<div class="pizza-prices"><div>Small <b>${money(item.small)}</b></div><div>Medium <b>${money(item.medium)}</b></div><button class="add-btn" type="button" data-item='${json}'>Add to order</button></div>`:
     `<div class="price-line"><span class="price">${money(item.price)}</span><button class="add-btn" type="button" data-item='${json}'>Add</button></div>`}</div>
   </article>`;
 }
@@ -153,7 +153,7 @@ function sendWhatsAppOrder(orderType,details={}){
 🕐 *Time:* ${time}
 
 📦 *ORDER TYPE*
-${orderType === 'Take Away' ? 'Delivery' : orderType}
+${orderType}
 
 ━━━━━━━━━━━━━━━━━━
 👤 *CUSTOMER DETAILS*
